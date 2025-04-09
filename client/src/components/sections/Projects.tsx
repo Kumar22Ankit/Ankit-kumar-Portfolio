@@ -8,7 +8,8 @@ const PROJECTS = [
     subtitle: 'A Kubernetes Solution for DevOps Integration',
     description: 'Developed a Kubernetes-based solution for integrating and testing features in a CI/CD pipeline, enabling streamlined development and deployment processes.',
     tags: ['Kubernetes', 'Docker', 'GitHub Actions', 'ArgoCD'],
-    category: 'kubernetes cicd'
+    category: 'kubernetes cicd',
+    github: 'https://github.com/Kumar22Ankit/PreProdSync-test'
   },
   {
     id: 2,
@@ -16,7 +17,8 @@ const PROJECTS = [
     subtitle: 'AWS Infrastructure with Terraform',
     description: 'Deployed a two-tier architecture on AWS using Terraform to create a modular and scalable infrastructure with VPC, EC2, security groups, and IAM configurations.',
     tags: ['AWS', 'Terraform', 'VPC', 'EC2'],
-    category: 'aws'
+    category: 'aws',
+    github: 'https://github.com/Kumar22Ankit/Two-tier_architecture'
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ const PROJECTS = [
     subtitle: 'CI/CD with GitHub Actions and ArgoCD',
     description: 'Deployed a personal portfolio website using GitHub Actions for CI/CD and ArgoCD for GitOps management, ensuring automatic updates with each commit.',
     tags: ['GitHub Actions', 'ArgoCD', 'AWS S3', 'Web Development'],
-    category: 'cicd'
+    category: 'cicd',
+    github: 'https://github.com/Kumar22Ankit/Argo-cd-project'
   },
   {
     id: 4,
@@ -32,7 +35,8 @@ const PROJECTS = [
     subtitle: 'Automating Server Instances',
     description: 'Built a serverless solution to automate EC2 instance scheduling based on company working hours, eliminating manual management and optimizing resource utilization.',
     tags: ['AWS', 'EC2', 'Python', 'Lambda'],
-    category: 'aws'
+    category: 'aws',
+    github: 'https://github.com/Kumar22Ankit/EC2-Timekeeper'
   }
 ];
 
@@ -117,6 +121,7 @@ const Projects: React.FC = () => {
                 description={project.description}
                 tags={project.tags}
                 category={project.category}
+                github={project.github}
               />
             </div>
           ))}

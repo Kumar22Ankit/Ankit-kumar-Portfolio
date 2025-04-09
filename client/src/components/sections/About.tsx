@@ -15,44 +15,83 @@ const About: React.FC = () => {
         
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="md:w-2/5">
-            <div className="rounded-lg shadow-lg w-full overflow-hidden h-80 bg-gray-200 dark:bg-gray-700">
+            <div className="rounded-lg shadow-lg w-full overflow-hidden h-80 bg-gray-200 dark:bg-gray-700 p-4">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
-                className="w-full h-full p-12"
+                className="w-full h-full"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  d="M21 9.5V8.25C21 7.00736 20.0076 6 18.75 6H5.25C3.98736 6 3 7.00736 3 8.25V15.75C3 16.9926 3.98736 18 5.25 18H18.75C20.0076 18 21 16.9926 21 15.75V14.5M12 15H9M12 12H7"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M16.5 15C16.5 15.4142 16.8358 15.75 17.25 15.75C17.6642 15.75 18 15.4142 18 15C18 14.5858 17.6642 14.25 17.25 14.25C16.8358 14.25 16.5 14.5858 16.5 15Z"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M16.5 12C16.5 12.4142 16.8358 12.75 17.25 12.75C17.6642 12.75 18 12.4142 18 12C18 11.5858 17.6642 11.25 17.25 11.25C16.8358 11.25 16.5 11.5858 16.5 12Z"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M16.5 9C16.5 9.41421 16.8358 9.75 17.25 9.75C17.6642 9.75 18 9.41421 18 9C18 8.58579 17.6642 8.25 17.25 8.25C16.8358 8.25 16.5 8.58579 16.5 9Z"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+                {/* DevOps Infinity Loop with Cloud Elements */}
+                <g>
+                  {/* Upper cloud */}
+                  <path 
+                    d="M18 8a3 3 0 00-2.55-2.97A5.5 5.5 0 005.5 8.5a4 4 0 001.5 7.7" 
+                    stroke="currentColor" 
+                    strokeWidth="1.5" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                    className="text-primary dark:text-secondary"
+                  />
+                  
+                  {/* Infinity loop */}
+                  <path 
+                    d="M7 16.5C8.5 14.5 9.5 14.5 11 16.5C12.5 18.5 13.5 18.5 15 16.5C16.5 14.5 17.5 14.5 19 16.5" 
+                    stroke="currentColor" 
+                    strokeWidth="1.5" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                    className="text-primary dark:text-secondary"
+                  />
+                  
+                  {/* Code symbol */}
+                  <path 
+                    d="M9 10l-2 2l2 2M15 10l2 2l-2 2" 
+                    stroke="currentColor" 
+                    strokeWidth="1.5" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                    className="text-primary dark:text-secondary"
+                  />
+
+                  {/* Database */}
+                  <ellipse 
+                    cx="12" 
+                    cy="19" 
+                    rx="2" 
+                    ry="1" 
+                    stroke="currentColor" 
+                    strokeWidth="1.5"
+                    className="text-primary dark:text-secondary"
+                  />
+                  <path 
+                    d="M10 19v-2c0-.5.9-1 2-1s2 .5 2 1v2" 
+                    stroke="currentColor" 
+                    strokeWidth="1.5"
+                    className="text-primary dark:text-secondary"
+                  />
+
+                  {/* Container symbol */}
+                  <rect 
+                    x="14" 
+                    y="5" 
+                    width="4" 
+                    height="4" 
+                    rx="1" 
+                    stroke="currentColor" 
+                    strokeWidth="1.5"
+                    className="text-primary dark:text-secondary"
+                  />
+                  <rect 
+                    x="15" 
+                    y="6" 
+                    width="2" 
+                    height="2" 
+                    rx="0.5" 
+                    fill="currentColor"
+                    className="text-primary dark:text-secondary"
+                  />
+                </g>
               </svg>
             </div>
           </div>

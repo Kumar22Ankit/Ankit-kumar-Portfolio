@@ -7,7 +7,6 @@ interface ProjectCardProps {
   tags: string[];
   category: string;
   imageUrl?: string;
-  github?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -84,16 +83,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
         </div>
         <div className="px-6 pb-6 mt-auto">
-          {github && (
-            <a 
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary dark:text-secondary hover:underline font-medium flex items-center"
-            >
-              View on GitHub <i className="fab fa-github ml-2"></i>
-            </a>
-          )}
+          <a href="#" className="text-primary dark:text-secondary hover:underline font-medium flex items-center">
+            View Project <i className="fas fa-arrow-right ml-2"></i>
+          </a>
         </div>
       </div>
     </div>

@@ -8,8 +8,7 @@ const PROJECTS = [
     subtitle: 'A Kubernetes Solution for DevOps Integration',
     description: 'Developed a Kubernetes-based solution for integrating and testing features in a CI/CD pipeline, enabling streamlined development and deployment processes.',
     tags: ['Kubernetes', 'Docker', 'GitHub Actions', 'ArgoCD'],
-    category: 'kubernetes cicd',
-    github: 'https://github.com/Kumar22Ankit/PreProdSync-test'
+    category: 'kubernetes cicd'
   },
   {
     id: 2,

@@ -42,8 +42,6 @@ const Certifications: React.FC = () => {
             <div 
               key={certification.id}
               className="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1 p-6"
-              data-aos="fade-up"
-              data-aos-delay={100 * (index + 1)}
             >
               <div className="flex items-center justify-center w-16 h-16 bg-primary/10 dark:bg-secondary/10 rounded-full mb-4">
                 <i className={`${certification.icon} text-2xl text-primary dark:text-secondary`}></i>

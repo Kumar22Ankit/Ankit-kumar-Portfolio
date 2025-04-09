@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
         </h2>
         
         <div className="flex flex-col md:flex-row gap-8">
-          <div className="md:w-1/2" data-aos="fade-right">
+          <div className="md:w-1/2">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <FormField
@@ -178,7 +178,7 @@ const Contact: React.FC = () => {
             </Form>
           </div>
           
-          <div className="md:w-1/2" data-aos="fade-left">
+          <div className="md:w-1/2">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 h-full">
               <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
               

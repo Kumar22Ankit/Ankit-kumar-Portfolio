@@ -69,7 +69,7 @@ items:
           ))}
         </div>
         
-        <div className="text-center mt-8" data-aos="fade-up" data-aos-delay="400">
+        <div className="text-center mt-8">
           <a 
             href="#" 
             className="inline-flex items-center px-6 py-3 bg-white dark:bg-gray-800 border border-primary dark:border-secondary text-primary dark:text-secondary rounded-md shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1"

@@ -32,7 +32,7 @@ const Experience: React.FC = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Professional Experience */}
-          <div data-aos="fade-right">
+          <div>
             <h3 className="text-2xl font-semibold mb-6 flex items-center">
               <i className="fas fa-briefcase mr-2 text-primary dark:text-secondary"></i>
               Professional Experience
@@ -79,7 +79,7 @@ const Experience: React.FC = () => {
           </div>
           
           {/* Education & Leadership */}
-          <div data-aos="fade-left">
+          <div>
             <h3 className="text-2xl font-semibold mb-6 flex items-center">
               <i className="fas fa-graduation-cap mr-2 text-primary dark:text-secondary"></i>
               Education & Leadership

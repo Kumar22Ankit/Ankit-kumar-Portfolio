@@ -121,6 +121,7 @@ const Projects: React.FC = () => {
                 description={project.description}
                 tags={project.tags}
                 category={project.category}
+                github={project.github}
               />
             </div>
           ))}

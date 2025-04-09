@@ -16,8 +16,6 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   return (
     <div 
       className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all group"
-      data-aos="fade-up"
-      data-aos-delay={delay}
     >
       <div className="h-48 bg-gray-200 dark:bg-gray-700 overflow-hidden flex items-center justify-center">
         <svg 

@@ -52,13 +52,7 @@ const Hero: React.FC = () => {
           >
             <i className="fas fa-envelope text-2xl"></i>
           </a>
-          <a 
-            href="tel:8882092012" 
-            className="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-secondary transition-colors"
-            aria-label="Phone"
-          >
-            <i className="fas fa-phone text-2xl"></i>
-          </a>
+
         </div>
       </div>
       <div className="md:w-1/2 flex justify-center">
@@ -76,8 +70,15 @@ const Hero: React.FC = () => {
                   <stop offset="100%" style={{ stopColor: 'hsl(226, 70%, 60%)', stopOpacity: 1 }} />
                 </linearGradient>
               </defs>
-              <circle cx="250" cy="250" r="200" fill="url(#grad1)" />
-              <text x="250" y="280" fontSize="100" fontWeight="bold" textAnchor="middle" fill="white">AK</text>
+              <rect x="100" y="150" width="300" height="200" rx="15" fill="url(#grad1)" />
+              {/* DevOps infinity symbol */}
+              <path d="M250,210 C270,180 310,180 330,210 C350,240 390,240 410,210 
+                        M250,290 C270,320 310,320 330,290 C350,260 390,260 410,290" 
+                    stroke="white" strokeWidth="12" fill="none"/>
+              {/* Server icon */}
+              <rect x="150" y="230" width="60" height="40" rx="5" fill="white" />
+              <rect x="160" y="240" width="40" height="5" rx="2" fill="url(#grad1)" />
+              <rect x="160" y="255" width="40" height="5" rx="2" fill="url(#grad1)" />
             </svg>
           </div>
         </div>

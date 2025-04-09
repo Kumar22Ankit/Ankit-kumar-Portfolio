@@ -29,25 +29,6 @@ const Articles: React.FC = () => {
       className="py-16"
     >
       <div className="container mx-auto px-4">
-        <div className="mb-10 bg-gray-900 text-white font-mono p-4 rounded-md text-sm mx-auto max-w-lg shadow-lg">
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-green-400">$</span>
-            <span className="typing-animation">kubectl get articles -o yaml</span>
-          </div>
-          <pre className="text-green-400 text-xs">
-{`apiVersion: blog.ankitkumar.com/v1
-kind: ArticleList
-metadata:
-  name: technical-writings
-items:
-  - title: Docker vs Kubernetes
-    category: Containerization
-  - title: Serverless on AWS
-    category: Cloud Computing
-  - title: GitOps with ArgoCD
-    category: DevOps`}
-          </pre>
-        </div>
         <h2 className="text-3xl font-bold mb-4 text-center font-sans">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary dark:from-secondary dark:to-primary">
             Technical Articles

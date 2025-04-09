@@ -25,6 +25,16 @@ const Experience: React.FC = () => {
             
             <div className="space-y-8">
               <TimelineItem
+                title="DevOps Intern"
+                organization="Infrasity"
+                period="December 2024 – March 2025"
+                icon="fas fa-briefcase"
+                details={[
+                  "Worked with a SaaS-based tech startup, focusing on Infrastructure as Code (IaC) tools, monitoring, and identity management"
+                ]}
+              />
+              
+              <TimelineItem
                 title="Cloud Intern"
                 organization="Edunet Foundation"
                 period="July 2024 – August 2024"

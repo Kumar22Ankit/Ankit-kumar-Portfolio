@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import ProjectCard from '@/components/ui/project-card';
-import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 const PROJECTS = [
   {
@@ -39,7 +38,6 @@ const PROJECTS = [
 
 const Projects: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
-  const { elementRef, isVisible } = useScrollAnimation();
 
   const handleFilterChange = (filter: string) => {
     setActiveFilter(filter);
@@ -53,10 +51,9 @@ const Projects: React.FC = () => {
   return (
     <section 
       id="projects" 
-      className="py-16 scroll-section"
-      ref={elementRef}
+      className="py-16"
     >
-      <div className={`container mx-auto px-4 ${isVisible ? 'scroll-visible' : ''}`}>
+      <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-4 text-center font-sans">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary dark:from-secondary dark:to-primary">
             Featured Projects

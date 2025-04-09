@@ -1,17 +1,13 @@
 import React from 'react';
 import SkillBar from '@/components/ui/skill-bar';
-import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 const Skills: React.FC = () => {
-  const { elementRef, isVisible } = useScrollAnimation();
-
   return (
     <section 
       id="skills" 
-      className="py-16 scroll-section"
-      ref={elementRef}
+      className="py-16"
     >
-      <div className={`container mx-auto px-4 ${isVisible ? 'scroll-visible' : ''}`}>
+      <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center font-sans">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary dark:from-secondary dark:to-primary">
             Technical Skills

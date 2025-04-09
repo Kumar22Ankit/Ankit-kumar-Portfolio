@@ -4,7 +4,7 @@ import { smoothScrollTo } from '@/lib/utils';
 const Hero: React.FC = () => {
   return (
     <section id="hero" className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
-      <div className="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+      <div className="md:w-1/2 mb-10 md:mb-0">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 font-sans">
           <span className="text-primary dark:text-secondary">DevOps Engineer</span>
           <br />& Cloud Specialist
@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className="md:w-1/2 flex justify-center" data-aos="fade-left">
+      <div className="md:w-1/2 flex justify-center">
         <div className="relative">
           <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary blur-md opacity-75 rounded-full"></div>
           <div className="relative rounded-lg shadow-2xl w-full max-w-md overflow-hidden">

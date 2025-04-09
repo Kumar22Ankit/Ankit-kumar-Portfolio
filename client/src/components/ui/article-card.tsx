@@ -4,6 +4,7 @@ interface ArticleCardProps {
   title: string;
   category: string;
   description: string;
+  link?: string;
   delay?: number;
 }
 
@@ -11,6 +12,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   title, 
   category, 
   description,
+  link = "#",
   delay = 0
 }) => {
   return (
@@ -35,7 +37,12 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         <span className="text-xs font-medium text-primary dark:text-secondary">{category.toUpperCase()}</span>
         <h3 className="text-lg font-semibold mt-2 mb-2 group-hover:text-primary dark:group-hover:text-secondary transition-colors">{title}</h3>
         <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{description}</p>
-        <a href="#" className="text-primary dark:text-secondary hover:underline text-sm flex items-center">
+        <a 
+          href={link} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-primary dark:text-secondary hover:underline text-sm flex items-center"
+        >
           Read Article <i className="fas fa-arrow-right ml-1"></i>
         </a>
       </div>

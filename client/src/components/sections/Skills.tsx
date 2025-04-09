@@ -8,6 +8,22 @@ const Skills: React.FC = () => {
       className="py-16"
     >
       <div className="container mx-auto px-4">
+        <div className="mb-10 bg-gray-900 text-white font-mono p-4 rounded-md text-sm mx-auto max-w-2xl shadow-lg">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-green-400">$</span>
+            <span>kubectl describe theme ankit-kumar-portfolio</span>
+          </div>
+          <div className="mt-2 text-white">
+            <p className="text-blue-400">Name:         <span className="text-green-400">devops-professional</span></p>
+            <p className="text-blue-400">Namespace:    <span className="text-green-400">portfolio</span></p>
+            <p className="text-blue-400">Theme Type:   <span className="text-green-400">Professional</span></p>
+            <p className="text-blue-400">Primary:      <span className="text-green-400">#3498db</span></p>
+            <p className="text-blue-400">Secondary:    <span className="text-green-400">#2ecc71</span></p>
+            <p className="text-blue-400">Dark Mode:    <span className="text-green-400">Available</span></p>
+            <p className="text-blue-400">Design:       <span className="text-green-400">Kubernetes-Inspired</span></p>
+          </div>
+        </div>
+
         <h2 className="text-3xl font-bold mb-12 text-center font-sans">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary dark:from-secondary dark:to-primary">
             Technical Skills

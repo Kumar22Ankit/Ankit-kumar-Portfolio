@@ -1,17 +1,29 @@
 import React from 'react';
 import TimelineItem from '@/components/ui/timeline-item';
-import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 const Experience: React.FC = () => {
-  const { elementRef, isVisible } = useScrollAnimation();
-
   return (
     <section 
       id="experience" 
-      className="py-16 bg-gray-50 dark:bg-gray-800/50 scroll-section"
-      ref={elementRef}
+      className="py-16 bg-gray-50 dark:bg-gray-800/50"
     >
-      <div className={`container mx-auto px-4 ${isVisible ? 'scroll-visible' : ''}`}>
+      <div className="container mx-auto px-4">
+        <div className="mb-10 bg-gray-900 text-green-400 dark:text-green-400 p-4 rounded-md font-mono text-sm overflow-x-auto mx-auto max-w-3xl shadow-lg">
+          <div className="flex items-center gap-2 mb-2">
+            <div className="flex-shrink-0 w-3 h-3 rounded-full bg-red-500"></div>
+            <div className="flex-shrink-0 w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div className="flex-shrink-0 w-3 h-3 rounded-full bg-green-500"></div>
+            <span className="text-gray-400">user@kubernetes:~$</span>
+          </div>
+          <p>kubectl describe profile ankit-kumar</p>
+          <div className="mt-2 border-t border-gray-700 pt-2">
+            <p>Name: Ankit Kumar</p>
+            <p>Role: DevOps Engineer</p>
+            <p>Status: <span className="text-green-400">Active</span></p>
+            <p>Specialties: [AWS, Kubernetes, Docker, Terraform, CI/CD]</p>
+            <p>Experience: 3+ years in DevOps and Cloud Technologies</p>
+          </div>
+        </div>
         <h2 className="text-3xl font-bold mb-12 text-center font-sans">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary dark:from-secondary dark:to-primary">
             Experience & Education

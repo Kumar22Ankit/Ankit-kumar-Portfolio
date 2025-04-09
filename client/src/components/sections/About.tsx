@@ -73,7 +73,7 @@ const About: React.FC = () => {
             <p>Role: DevOps Engineer</p>
             <p>Status: <span className="text-green-400">Active</span></p>
             <p>Specialties: [AWS, Kubernetes, Docker, Terraform, CI/CD]</p>
-            <p>Experience: 3+ years in DevOps and Cloud Technologies</p>
+            <p>Experience: 1+ year in DevOps and Cloud Technologies</p>
           </div>
         </div>
       </div>

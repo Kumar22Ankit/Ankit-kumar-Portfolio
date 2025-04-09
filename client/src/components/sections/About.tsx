@@ -33,7 +33,7 @@ const About: React.FC = () => {
           <div className="md:w-3/5">
             <div className="prose dark:prose-invert max-w-none">
               <h3 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
-                DevOps and Cloud Computing Practitioner
+                DevOps and Cloud Computing
               </h3>
               <p className="mb-4 text-gray-700 dark:text-gray-300">
                 I'm a passionate DevOps Engineer with experience in managing cloud infrastructure, automation, and CI/CD pipelines. 

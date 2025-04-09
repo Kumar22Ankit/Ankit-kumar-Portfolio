@@ -18,15 +18,15 @@ export const routes = {
 };
 
 export const colors = {
-  primary: "#2563eb",
-  primaryDark: "#1d4ed8",
-  primaryLight: "#3b82f6",
+  primary: "#0891b2",
+  primaryDark: "#0e7490",
+  primaryLight: "#06b6d4",
   secondary: "#1e293b",
   secondaryDark: "#0f172a",
   secondaryLight: "#334155",
-  accent: "#06b6d4",
-  accentDark: "#0891b2",
-  accentLight: "#22d3ee",
+  accent: "#2563eb",
+  accentDark: "#1d4ed8",
+  accentLight: "#3b82f6",
   background: "#f8fafc",
   backgroundDark: "#0f172a",
   text: "#334155",

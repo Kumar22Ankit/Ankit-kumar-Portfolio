@@ -118,7 +118,7 @@ export const projects: ResumeData["projects"] = [
     technologies: ["Kubernetes", "Docker", "GitHub Actions", "ArgoCD", "Node.js", "PostgreSQL"],
     completed: "Completed in 2023",
     github: "https://github.com/Kumar22Ankit",
-    bgColor: "#1e40af"
+    bgColor: "#0e7490"
   },
   {
     title: "Two-Tier Architecture Deployment using Terraform",
@@ -127,7 +127,7 @@ export const projects: ResumeData["projects"] = [
     technologies: ["AWS", "Terraform", "VPC", "EC2", "IAM"],
     completed: "Completed in 2023",
     github: "https://github.com/Kumar22Ankit",
-    bgColor: "#7e22ce"
+    bgColor: "#0284c7"
   },
   {
     title: "Portfolio Deployment Using GitHub Actions and ArgoCD",
@@ -137,7 +137,7 @@ export const projects: ResumeData["projects"] = [
     completed: "Completed in 2023",
     github: "https://github.com/Kumar22Ankit",
     live: "#",
-    bgColor: "#0f766e"
+    bgColor: "#0891b2"
   },
   {
     title: "EC2 Timekeeper: Automating Server Instances",
@@ -146,7 +146,7 @@ export const projects: ResumeData["projects"] = [
     technologies: ["AWS", "Python", "EC2", "Lambda"],
     completed: "Completed in 2023",
     github: "https://github.com/Kumar22Ankit",
-    bgColor: "#b45309"
+    bgColor: "#06b6d4"
   }
 ];
 
@@ -192,7 +192,7 @@ export const articles: ResumeData["articles"] = [
     date: "Aug 22, 2023",
     description: "A deep dive into Kubernetes autoscaling mechanisms. Learn how to configure Horizontal Pod Autoscaler, Vertical Pod Autoscaler, and Cluster Autoscaler for optimal resource utilization.",
     url: "#",
-    bgColor: "#1d4ed8"
+    bgColor: "#0891b2"
   },
   {
     title: "Building Reusable Terraform Modules for AWS Infrastructure",
@@ -200,7 +200,7 @@ export const articles: ResumeData["articles"] = [
     date: "Oct 05, 2023",
     description: "Step-by-step guide to creating maintainable and reusable Terraform modules. Learn how to structure your code, handle inputs/outputs, and implement versioning for your AWS infrastructure.",
     url: "#",
-    bgColor: "#7e22ce"
+    bgColor: "#06b6d4"
   }
 ];
 

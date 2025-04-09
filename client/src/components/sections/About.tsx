@@ -15,84 +15,18 @@ const About: React.FC = () => {
         
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="md:w-2/5">
-            <div className="rounded-lg shadow-lg w-full overflow-hidden h-80 bg-gray-200 dark:bg-gray-700 p-4">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                className="w-full h-full"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* DevOps Infinity Loop with Cloud Elements */}
-                <g>
-                  {/* Upper cloud */}
-                  <path 
-                    d="M18 8a3 3 0 00-2.55-2.97A5.5 5.5 0 005.5 8.5a4 4 0 001.5 7.7" 
-                    stroke="currentColor" 
-                    strokeWidth="1.5" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                    className="text-primary dark:text-secondary"
-                  />
-                  
-                  {/* Infinity loop */}
-                  <path 
-                    d="M7 16.5C8.5 14.5 9.5 14.5 11 16.5C12.5 18.5 13.5 18.5 15 16.5C16.5 14.5 17.5 14.5 19 16.5" 
-                    stroke="currentColor" 
-                    strokeWidth="1.5" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                    className="text-primary dark:text-secondary"
-                  />
-                  
-                  {/* Code symbol */}
-                  <path 
-                    d="M9 10l-2 2l2 2M15 10l2 2l-2 2" 
-                    stroke="currentColor" 
-                    strokeWidth="1.5" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                    className="text-primary dark:text-secondary"
-                  />
-
-                  {/* Database */}
-                  <ellipse 
-                    cx="12" 
-                    cy="19" 
-                    rx="2" 
-                    ry="1" 
-                    stroke="currentColor" 
-                    strokeWidth="1.5"
-                    className="text-primary dark:text-secondary"
-                  />
-                  <path 
-                    d="M10 19v-2c0-.5.9-1 2-1s2 .5 2 1v2" 
-                    stroke="currentColor" 
-                    strokeWidth="1.5"
-                    className="text-primary dark:text-secondary"
-                  />
-
-                  {/* Container symbol */}
-                  <rect 
-                    x="14" 
-                    y="5" 
-                    width="4" 
-                    height="4" 
-                    rx="1" 
-                    stroke="currentColor" 
-                    strokeWidth="1.5"
-                    className="text-primary dark:text-secondary"
-                  />
-                  <rect 
-                    x="15" 
-                    y="6" 
-                    width="2" 
-                    height="2" 
-                    rx="0.5" 
-                    fill="currentColor"
-                    className="text-primary dark:text-secondary"
-                  />
-                </g>
-              </svg>
+            <div className="relative rounded-lg shadow-lg w-full overflow-hidden h-80 bg-gray-200 dark:bg-gray-700 border-4 border-primary dark:border-secondary transform hover:scale-[1.02] transition-all duration-300">
+              <div className="w-full h-full">
+                <img 
+                  src="/images/profile.jpeg" 
+                  alt="Ankit Kumar" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <h3 className="text-lg text-white font-semibold">Ankit Kumar</h3>
+                <p className="text-sm text-gray-200">DevOps Engineer</p>
+              </div>
             </div>
           </div>
           

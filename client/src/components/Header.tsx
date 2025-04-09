@@ -11,7 +11,25 @@ const Header: React.FC = () => {
   };
 
   const handleNavClick = (sectionId: string) => {
-    smoothScrollTo(sectionId);
+    console.log(`Attempting to navigate to section: ${sectionId}`);
+    setTimeout(() => {
+      // Use direct DOM scrolling as a fallback method
+      const element = document.getElementById(sectionId);
+      if (element) {
+        console.log(`Found section ${sectionId}, scrolling to it`);
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      } else {
+        console.error(`Section with id "${sectionId}" not found in the DOM`);
+      }
+    }, 100);
+    
     if (mobileMenuOpen) {
       setMobileMenuOpen(false);
     }

@@ -19,12 +19,16 @@ export function smoothScrollTo(elementId: string): void {
   if (element) {
     const headerOffset = 80;
     const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    const offsetPosition = elementPosition + window.scrollY - headerOffset;
+    
+    console.log(`Scrolling to ${elementId} at position ${offsetPosition}`);
     
     window.scrollTo({
       top: offsetPosition,
       behavior: 'smooth'
     });
+  } else {
+    console.error(`Element with id "${elementId}" not found`);
   }
 }
 

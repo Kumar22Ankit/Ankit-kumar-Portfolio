@@ -3,8 +3,8 @@ import { smoothScrollTo } from '@/lib/utils';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
-      <div className="md:w-1/2 mb-10 md:mb-0">
+    <section id="hero" className="container mx-auto px-4 py-16 md:py-24 flex items-center justify-center min-h-[80vh]">
+      <div className="text-center max-w-2xl">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 font-sans">
           <span className="text-primary dark:text-secondary">DevOps Engineer</span>
           <br />& Cloud Specialist
@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
         <p className="text-xl mb-8 text-gray-700 dark:text-gray-300">
           Building reliable infrastructure & automating deployment pipelines
         </p>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 justify-center">
           <button 
             onClick={() => smoothScrollTo('contact')}
             className="px-6 py-3 bg-primary dark:bg-secondary text-white rounded-md shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1"
@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
             View Projects
           </button>
         </div>
-        <div className="flex mt-8 space-x-4">
+        <div className="flex justify-center mt-8 space-x-4">
           <a 
             href="https://linkedin.com/in/ankit-kumar-a20478230" 
             target="_blank"
@@ -52,35 +52,6 @@ const Hero: React.FC = () => {
           >
             <i className="fas fa-envelope text-2xl"></i>
           </a>
-
-        </div>
-      </div>
-      <div className="md:w-1/2 flex justify-center">
-        <div className="relative">
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary blur-md opacity-75 rounded-full"></div>
-          <div className="relative rounded-lg shadow-2xl w-full max-w-md overflow-hidden">
-            <svg 
-              viewBox="0 0 500 500" 
-              className="w-full h-full object-cover"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{ stopColor: 'hsl(214, 100%, 48%)', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: 'hsl(226, 70%, 60%)', stopOpacity: 1 }} />
-                </linearGradient>
-              </defs>
-              <rect x="100" y="150" width="300" height="200" rx="15" fill="url(#grad1)" />
-              {/* DevOps infinity symbol */}
-              <path d="M250,210 C270,180 310,180 330,210 C350,240 390,240 410,210 
-                        M250,290 C270,320 310,320 330,290 C350,260 390,260 410,290" 
-                    stroke="white" strokeWidth="12" fill="none"/>
-              {/* Server icon */}
-              <rect x="150" y="230" width="60" height="40" rx="5" fill="white" />
-              <rect x="160" y="240" width="40" height="5" rx="2" fill="url(#grad1)" />
-              <rect x="160" y="255" width="40" height="5" rx="2" fill="url(#grad1)" />
-            </svg>
-          </div>
         </div>
       </div>
     </section>

@@ -189,21 +189,6 @@ const Contact: React.FC = () => {
                 
                 <div className="flex items-start">
                   <div className="flex items-center justify-center w-10 h-10 bg-primary/10 dark:bg-secondary/10 rounded-full mr-4">
-                    <i className="fas fa-phone text-primary dark:text-secondary"></i>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>
-                    <a 
-                      href="tel:8882092012" 
-                      className="text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-secondary transition-colors"
-                    >
-                      8882092012
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex items-center justify-center w-10 h-10 bg-primary/10 dark:bg-secondary/10 rounded-full mr-4">
                     <i className="fab fa-linkedin text-primary dark:text-secondary"></i>
                   </div>
                   <div>

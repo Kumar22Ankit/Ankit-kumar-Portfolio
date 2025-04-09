@@ -65,18 +65,7 @@ const Contact: React.FC = () => {
       className="py-16 bg-gray-50 dark:bg-gray-800/50"
     >
       <div className="container mx-auto px-4">
-        <div className="mb-10 bg-gray-900 text-white font-mono p-4 rounded-md text-sm mx-auto max-w-xl shadow-lg">
-          <div className="flex items-center gap-2 mb-2">
-            <span className="text-green-400">$</span>
-            <span>kubectl expose deployment ankit-kumar --port=80 --type=LoadBalancer</span>
-          </div>
-          <div className="mt-2 text-green-400">
-            <p>service/ankit-kumar exposed</p>
-            <p className="mt-1">$ kubectl get svc</p>
-            <p className="mt-1">NAME         TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)</p>
-            <p>ankit-kumar  LoadBalancer  10.254.8.12   contacts.me    80:32766/TCP</p>
-          </div>
-        </div>
+
         <h2 className="text-3xl font-bold mb-12 text-center font-sans">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary dark:from-secondary dark:to-primary">
             Get In Touch

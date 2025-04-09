@@ -14,7 +14,7 @@ const About: React.FC = () => {
         </h2>
         
         <div className="flex flex-col md:flex-row gap-8 items-center">
-          <div className="md:w-2/5" data-aos="fade-right">
+          <div className="md:w-2/5">
             <div className="rounded-lg shadow-lg w-full overflow-hidden h-80 bg-gray-200 dark:bg-gray-700">
               <svg
                 viewBox="0 0 24 24"
@@ -57,7 +57,7 @@ const About: React.FC = () => {
             </div>
           </div>
           
-          <div className="md:w-3/5" data-aos="fade-left">
+          <div className="md:w-3/5">
             <div className="prose dark:prose-invert max-w-none">
               <h3 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
                 DevOps and Cloud Computing Practitioner

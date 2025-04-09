@@ -32,7 +32,7 @@ const Skills: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Cloud Skills */}
-          <div className="skill-category p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="100">
+          <div className="skill-category p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
             <h3 className="text-xl font-semibold mb-4 flex items-center">
               <i className="fas fa-cloud mr-2 text-primary dark:text-secondary"></i>
               Cloud Platforms
@@ -45,7 +45,7 @@ const Skills: React.FC = () => {
           </div>
 
           {/* Infrastructure as Code */}
-          <div className="skill-category p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="200">
+          <div className="skill-category p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
             <h3 className="text-xl font-semibold mb-4 flex items-center">
               <i className="fas fa-code-branch mr-2 text-primary dark:text-secondary"></i>
               Infrastructure as Code
@@ -57,7 +57,7 @@ const Skills: React.FC = () => {
           </div>
 
           {/* Containerization */}
-          <div className="skill-category p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="300">
+          <div className="skill-category p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
             <h3 className="text-xl font-semibold mb-4 flex items-center">
               <i className="fab fa-docker mr-2 text-primary dark:text-secondary"></i>
               Containerization
@@ -69,7 +69,7 @@ const Skills: React.FC = () => {
           </div>
 
           {/* CI/CD */}
-          <div className="skill-category p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="400">
+          <div className="skill-category p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
             <h3 className="text-xl font-semibold mb-4 flex items-center">
               <i className="fas fa-sync-alt mr-2 text-primary dark:text-secondary"></i>
               CI/CD & Monitoring
@@ -83,7 +83,7 @@ const Skills: React.FC = () => {
         </div>
 
         {/* Languages and OS */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="500">
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="text-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow">
             <div className="text-4xl mb-2 text-primary dark:text-secondary"><i className="fab fa-python"></i></div>
             <p className="font-medium">Python</p>

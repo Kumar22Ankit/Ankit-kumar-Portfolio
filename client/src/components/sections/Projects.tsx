@@ -64,7 +64,7 @@ const Projects: React.FC = () => {
         </p>
         
         {/* Project Filters */}
-        <div className="flex flex-wrap justify-center gap-2 mb-8" data-aos="fade-up">
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
           <button 
             className={`px-4 py-2 rounded-md transition-colors ${
               activeFilter === 'all' 
@@ -110,7 +110,7 @@ const Projects: React.FC = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredProjects.map((project, index) => (
-            <div key={project.id} data-aos="fade-up" data-aos-delay={100 * (index + 1)}>
+            <div key={project.id}>
               <ProjectCard 
                 title={project.title}
                 subtitle={project.subtitle}

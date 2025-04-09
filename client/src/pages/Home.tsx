@@ -12,11 +12,6 @@ import Contact from '@/components/sections/Contact';
 
 const Home: React.FC = () => {
   useEffect(() => {
-    // Initialize AOS if needed
-    if (typeof AOS !== 'undefined') {
-      AOS.refresh();
-    }
-
     // Set document title
     document.title = 'Ankit Kumar | DevOps Engineer';
   }, []);

@@ -38,7 +38,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Route to serve the resume file
-  app.get('/Ankit-Kumar-Resume.pdf', (req, res) => {
+  app.get('/Ankit-Resume.pdf', (req, res) => {
     const resumePath = path.resolve(process.cwd(), 'attached_assets', 'Ankit kumar-resume.pdf');
     
     // Check if file exists

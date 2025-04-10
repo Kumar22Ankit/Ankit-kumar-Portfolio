@@ -39,7 +39,7 @@ export function handleDownloadResume(): void {
   // Create an anchor element
   const link = document.createElement('a');
   link.href = resumePath;
-  link.download = "Ankit-Resume.pdf";
+  link.download = "/attached_assets/Ankit-resume.pdf";
   
   // Append to body, click and remove
   document.body.appendChild(link);

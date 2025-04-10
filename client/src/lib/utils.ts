@@ -34,12 +34,12 @@ export function smoothScrollTo(elementId: string): void {
 
 export function handleDownloadResume(): void {
   // Get path to PDF
-  const resumePath = "/Ankit-Resume.pdf";
+  const resumePath = "/attached_assets/Ankit-resume.pdf";
   
   // Create an anchor element
   const link = document.createElement('a');
   link.href = resumePath;
-  link.download = "/attached_assets/Ankit-resume.pdf";
+  link.download = "Ankit-resume.pdf";
   
   // Append to body, click and remove
   document.body.appendChild(link);

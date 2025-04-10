@@ -34,7 +34,7 @@ export function smoothScrollTo(elementId: string): void {
 
 export function handleDownloadResume(): void {
   // Get path to PDF
-  const resumePath = "/attached_assets/Ankit-resume.pdf";
+  const resumePath = "https://drive.google.com/file/d/14BqFwhUrkbTa80MCFkHyvqTQX5xhhr5o/view?usp=sharing";
   
   // Create an anchor element
   const link = document.createElement('a');

@@ -23,22 +23,20 @@ interface ThemeProviderProps {
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(() => {
-    // Check for saved theme preference or prefer-color-scheme
+    // Default to dark theme for our dark-first design
     const savedTheme = localStorage.getItem('theme') as Theme | null;
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    return (savedTheme === 'dark' || (!savedTheme && prefersDark)) ? 'dark' : 'light';
+    return (savedTheme === 'light') ? 'light' : 'dark';
   });
 
   useEffect(() => {
-    // Apply theme to document element
+    const root = document.documentElement;
     if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
+      root.classList.add('dark');
+      root.classList.remove('light');
     } else {
-      document.documentElement.classList.remove('dark');
+      root.classList.add('light');
+      root.classList.remove('dark');
     }
-    
-    // Save preference to localStorage
     localStorage.setItem('theme', theme);
   }, [theme]);
 

@@ -1,241 +1,240 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { handleDownloadResume } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
+import AnimatedSection from '@/components/ui/AnimatedSection';
 
 const contactFormSchema = z.object({
   name: z.string().min(1, 'Name is required'),
   email: z.string().email('Invalid email address'),
   subject: z.string().min(1, 'Subject is required'),
-  message: z.string().min(10, 'Message must be at least 10 characters')
+  message: z.string().min(10, 'Message must be at least 10 characters'),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
+const CONTACT_INFO = [
+  {
+    icon: 'fas fa-envelope',
+    label: 'Email',
+    value: 'Ankitkumar6034651@gmail.com',
+    href: 'mailto:Ankitkumar6034651@gmail.com',
+    color: '#06b6d4',
+  },
+  {
+    icon: 'fab fa-linkedin',
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/ankit-kumar-a20478230',
+    href: 'https://linkedin.com/in/ankit-kumar-a20478230',
+    color: '#0A66C2',
+  },
+  {
+    icon: 'fab fa-github',
+    label: 'GitHub',
+    value: 'github.com/Kumar22Ankit',
+    href: 'https://github.com/Kumar22Ankit',
+    color: '#fff',
+  },
+];
+
 const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  
+
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    }
+    defaultValues: { name: '', email: '', subject: '', message: '' },
   });
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
     try {
-      // In a real implementation, send this data to a server
-      console.log('Form data:', data);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-      
-      // Reset form
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      toast({ title: 'Message sent!', description: "Thank you for reaching out. I'll get back to you soon." });
       form.reset();
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "There was a problem sending your message. Please try again.",
-        variant: "destructive"
-      });
+    } catch {
+      toast({ title: 'Error', description: 'Please try again.', variant: 'destructive' });
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <section 
-      id="contact" 
-      className="py-16 bg-gray-50 dark:bg-gray-800/50"
-    >
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-24 relative overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full opacity-5 blur-3xl pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse, #06b6d4, #a855f7)' }} />
 
-        <h2 className="text-3xl font-bold mb-12 text-center font-sans">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary dark:from-secondary dark:to-primary">
-            Get In Touch
-          </span>
-        </h2>
-        
-        <div className="flex flex-col md:flex-row gap-8">
-          <div className="md:w-1/2">
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input 
-                          placeholder="Your name" 
-                          {...field} 
-                          className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-secondary focus:border-transparent dark:bg-gray-700 dark:text-white transition-all" 
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input 
-                          type="email" 
-                          placeholder="Your email" 
-                          {...field} 
-                          className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-secondary focus:border-transparent dark:bg-gray-700 dark:text-white transition-all" 
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="subject"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Subject</FormLabel>
-                      <FormControl>
-                        <Input 
-                          placeholder="Subject of your message" 
-                          {...field} 
-                          className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-secondary focus:border-transparent dark:bg-gray-700 dark:text-white transition-all" 
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          placeholder="Your message" 
-                          {...field} 
-                          rows={5}
-                          className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-secondary focus:border-transparent dark:bg-gray-700 dark:text-white transition-all" 
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                
-                <Button 
-                  type="submit" 
-                  disabled={isSubmitting}
-                  className="w-full px-6 py-3 bg-primary dark:bg-secondary text-white rounded-md shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1"
-                >
-                  {isSubmitting ? (
-                    <span className="flex items-center">
-                      <i className="fas fa-circle-notch fa-spin mr-2"></i> Sending...
-                    </span>
-                  ) : (
-                    'Send Message'
-                  )}
-                </Button>
-              </form>
-            </Form>
-          </div>
-          
-          <div className="md:w-1/2">
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 h-full">
-              <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
-              
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="flex items-center justify-center w-10 h-10 bg-primary/10 dark:bg-secondary/10 rounded-full mr-4">
-                    <i className="fas fa-envelope text-primary dark:text-secondary"></i>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                    <a 
-                      href="mailto:Ankitkumar6034651@gmail.com" 
-                      className="text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-secondary transition-colors"
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <AnimatedSection className="text-center mb-16">
+          <p className="text-xs font-bold uppercase tracking-widest text-cyan-400 mb-3">Let's Talk</p>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+            <span className="gradient-text">Get In Touch</span>
+          </h2>
+          <p className="text-slate-500 mt-3 max-w-xl mx-auto">
+            Open to job opportunities, collaborations, or just to say hello!
+          </p>
+        </AnimatedSection>
+
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
+          {/* Contact Form */}
+          <AnimatedSection direction="left" className="lg:col-span-3">
+            <div
+              className="p-[1px] rounded-2xl"
+              style={{ background: 'linear-gradient(135deg, rgba(6,182,212,0.3), rgba(168,85,247,0.3))' }}
+            >
+              <div className="glass p-7 rounded-2xl" style={{ background: 'rgba(10,15,30,0.9)' }}>
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-slate-400 text-xs font-semibold uppercase tracking-wide">Name</FormLabel>
+                            <FormControl>
+                              <input
+                                placeholder="Your name"
+                                {...field}
+                                className="glow-input"
+                              />
+                            </FormControl>
+                            <FormMessage className="text-red-400 text-xs" />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel className="text-slate-400 text-xs font-semibold uppercase tracking-wide">Email</FormLabel>
+                            <FormControl>
+                              <input
+                                type="email"
+                                placeholder="your@email.com"
+                                {...field}
+                                className="glow-input"
+                              />
+                            </FormControl>
+                            <FormMessage className="text-red-400 text-xs" />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
+
+                    <FormField
+                      control={form.control}
+                      name="subject"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-slate-400 text-xs font-semibold uppercase tracking-wide">Subject</FormLabel>
+                          <FormControl>
+                            <input
+                              placeholder="What's this about?"
+                              {...field}
+                              className="glow-input"
+                            />
+                          </FormControl>
+                          <FormMessage className="text-red-400 text-xs" />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-slate-400 text-xs font-semibold uppercase tracking-wide">Message</FormLabel>
+                          <FormControl>
+                            <textarea
+                              placeholder="Your message..."
+                              rows={5}
+                              {...field}
+                              className="glow-input resize-none"
+                            />
+                          </FormControl>
+                          <FormMessage className="text-red-400 text-xs" />
+                        </FormItem>
+                      )}
+                    />
+
+                    <motion.button
+                      type="submit"
+                      disabled={isSubmitting}
+                      whileHover={{ scale: 1.02, boxShadow: '0 0 25px rgba(6,182,212,0.3)' }}
+                      whileTap={{ scale: 0.98 }}
+                      className="w-full py-3 rounded-xl font-semibold text-white text-sm relative overflow-hidden"
+                      style={{ background: 'linear-gradient(135deg, #06b6d4, #a855f7)' }}
                     >
-                      Ankitkumar6034651@gmail.com
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex items-center justify-center w-10 h-10 bg-primary/10 dark:bg-secondary/10 rounded-full mr-4">
-                    <i className="fab fa-linkedin text-primary dark:text-secondary"></i>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">LinkedIn</p>
-                    <a 
-                      href="https://linkedin.com/in/ankit-kumar-a20478230" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-secondary transition-colors"
-                    >
-                      linkedin.com/in/ankit-kumar-a20478230
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex items-center justify-center w-10 h-10 bg-primary/10 dark:bg-secondary/10 rounded-full mr-4">
-                    <i className="fab fa-github text-primary dark:text-secondary"></i>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">GitHub</p>
-                    <a 
-                      href="https://github.com/Kumar22Ankit" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-secondary transition-colors"
-                    >
-                      github.com/Kumar22Ankit
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mt-8">
-                <h3 className="text-lg font-semibold mb-4">Let's connect</h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  Feel free to reach out for job opportunities, collaborations, or just to say hello!
-                </p>
-                <Button 
-                  onClick={handleDownloadResume}
-                  className="inline-flex items-center px-4 py-2 bg-primary/10 dark:bg-secondary/10 text-primary dark:text-secondary rounded-md hover:bg-primary/20 dark:hover:bg-secondary/20 transition-colors"
-                >
-                  <i className="fas fa-download mr-2"></i> Download Resume
-                </Button>
+                      <span className="relative z-10 flex items-center justify-center gap-2">
+                        {isSubmitting ? (
+                          <>
+                            <i className="fas fa-circle-notch fa-spin" /> Sending...
+                          </>
+                        ) : (
+                          <>
+                            <i className="fas fa-paper-plane" /> Send Message
+                          </>
+                        )}
+                      </span>
+                    </motion.button>
+                  </form>
+                </Form>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
+
+          {/* Contact info sidebar */}
+          <AnimatedSection direction="right" delay={0.15} className="lg:col-span-2 space-y-4">
+            {CONTACT_INFO.map(({ icon, label, value, href, color }) => (
+              <motion.a
+                key={label}
+                href={href}
+                target={href.startsWith('http') ? '_blank' : undefined}
+                rel="noopener noreferrer"
+                whileHover={{ x: 4, boxShadow: `0 0 20px ${color}15` }}
+                className="glass-card p-4 rounded-xl flex items-center gap-4 group cursor-pointer block no-underline"
+              >
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 text-sm transition-all duration-200"
+                  style={{ background: `${color}12`, border: `1px solid ${color}25`, color }}
+                >
+                  <i className={icon} />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs text-slate-600 font-medium uppercase tracking-wide">{label}</p>
+                  <p className="text-slate-300 text-sm font-medium truncate group-hover:text-cyan-400 transition-colors duration-200">
+                    {value}
+                  </p>
+                </div>
+                <i className="fas fa-arrow-right text-xs text-slate-700 group-hover:text-cyan-400 transition-colors ml-auto flex-shrink-0" />
+              </motion.a>
+            ))}
+
+            {/* Resume download card */}
+            <div className="glass-card p-5 rounded-xl mt-4">
+              <p className="text-slate-300 text-sm font-semibold mb-1">Download Resume</p>
+              <p className="text-slate-600 text-xs mb-4">Get a copy of my latest resume in PDF format.</p>
+              <motion.button
+                onClick={handleDownloadResume}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="w-full py-2.5 rounded-lg text-sm font-semibold text-white flex items-center justify-center gap-2"
+                style={{ background: 'linear-gradient(135deg, rgba(6,182,212,0.2), rgba(168,85,247,0.2))', border: '1px solid rgba(6,182,212,0.25)' }}
+              >
+                <i className="fas fa-download text-cyan-400" />
+                <span className="text-slate-200">Download CV</span>
+              </motion.button>
+            </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

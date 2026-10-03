@@ -33,16 +33,11 @@ export function smoothScrollTo(elementId: string): void {
 }
 
 export function handleDownloadResume(): void {
-  // Get path to PDF
-  const resumePath = "https://drive.google.com/file/d/14BqFwhUrkbTa80MCFkHyvqTQX5xhhr5o/view?usp=sharing";
-  
-  // Create an anchor element
   const link = document.createElement('a');
-  link.href = resumePath;
-  link.download = "Ankit-resume.pdf";
-  
-  // Append to body, click and remove
+  link.href = '/Ankit_Kumar_Resume.pdf';
+  link.download = 'Ankit_Kumar_Resume.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 }
+
